@@ -18,7 +18,8 @@ class PHPUnitController extends Controller
             $process = new Process([
                 PHP_BINARY,
                 base_path('vendor/bin/phpunit'),
-                base_path('tests'),
+                '--configuration',
+                base_path('phpunit.xml'),
             ]);
             $process->start();
 
